@@ -69,11 +69,13 @@ This two-thirds majority ensures that the network is fault tolerant and can with
 
 ## Signing a transaction
 
-Users who want to make transactions have accounts associated with keys. Upon joining the network, users are assigned a randomly generated seed which works as a wallet. The seed in turn generates private and public keys. The keys are used to derive addresses. The addresses are associated with an account. The account address is used to receive funds. The private keys are used to sign the transactions posted to the ledger. The seed and private keys should not be shared. The private key is used to sign transactions and the corresponding public key can verify the signature. These concepts are borrowed from public-key cryptography.
+Users who want to make transactions have accounts associated with addresses. To make transactions on the blockchain, users need a randomly generated seed. The seed is simply a large number initialized with a source of randomness. The seed in turn generates private and public keys. The public key is used to derive addresses. Due to the mathematics involved (one-way hash functions) the address cannot be used to reveal the key. 
 
-Some exchanges or hosted wallets may abstract the process of random seed generation from their users. Since the transfer of funds is associated with the user's address, the account keeps a track of their balances and/or digital assets transferred to them. 
+The addresses are unique identifiers that are used to receive assets from other users. The private keys are used to sign transactions prior to being broadcasted to the network by the nodes. The seed and private keys should not be shared. These concepts are borrowed from public-key cryptography.
 
-While the blockchain inherently does not require people identities to be associated with accounts, governments all over the world are beginning to require this.
+Some exchanges or hosted wallets may abstract the process of random seed generation and/or blockchain wallet addresses from their users. Since the transfer of funds is associated with the user's address, the account keeps a track of their balances and/or digital assets transferred to them. 
+
+While the blockchain code inherently does not require people identities to be associated with accounts, governments all over the world are beginning to require this as more users participate in the technology.
 
 ## Blockchain economics
 
